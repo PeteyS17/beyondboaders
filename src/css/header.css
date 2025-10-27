@@ -1,0 +1,41 @@
+#main-header {
+    background: cornflowerblue;
+    color: white;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  
+  .header-bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  
+  .header-bar h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .profile-name {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: right;
+  }
+  
