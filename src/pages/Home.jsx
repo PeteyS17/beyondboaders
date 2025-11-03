@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import "../css/home.css";
+import Slideshow from "../components/Slideshow";
 
-
-import beach from "../images/beach2.png";
 import chicagoImg from "../images/chicagohome.png";
 import londonImg from "../images/london1.jpeg";
 import tokyoImg from "../images/tokyo.jpeg";
@@ -10,13 +9,11 @@ import tokyoImg from "../images/tokyo.jpeg";
 const Home = () => {
   return (
     <main id="home" className="main-content">
-     
       <section className="idea-img">
-        <img src={beach} alt="Sunny beach with turquoise water and boardwalk" />
-        <p>Find the right trip faster.</p>
+        <Slideshow />
+        <p className="banner-caption">Find the right trip faster.</p>
       </section>
 
-     
       <section className="idea">
         <h2>Plan trips with clarity, not clutter</h2>
         <p>
@@ -25,7 +22,6 @@ const Home = () => {
         </p>
       </section>
 
-      {/* Top Destinations */}
       <section className="gallery columns">
         <Link className="tile tile--link" to="/destinations">
           <img src={chicagoImg} alt="Chicago skyline at dusk" loading="lazy" />

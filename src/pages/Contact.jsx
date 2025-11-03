@@ -24,12 +24,10 @@ const Contact = () => {
 
         <figure className="tile card">
           <img src={foodImg} alt="Local cuisine" />
-          <figcaption>Local Cuisines</figcaption>
+          <figcaption>Local cuisines</figcaption>
         </figure>
       </div>
 
-
-     
       <section className="contact-grid">
         <div className="contact-col">
           <h3>Our Location</h3>
@@ -47,18 +45,48 @@ const Contact = () => {
         <div className="contact-col">
           <h3>Contact Us</h3>
 
-          
-          <form className="contact-form card" onSubmit={(e) => e.preventDefault()}>
-            <label htmlFor="name">Name:</label>
-            <input id="name" type="text" />
+          {/* W3Schools Contact Form */}
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            className="contact-form card"
+          >
+            <input type="hidden" name="access_key" value="f7dbe5f3-ba73-4be0-8f3c-c65a9df2106a" />
 
-            <label htmlFor="email">Email:</label>
-            <input id="email" type="email" />
+            <label htmlFor="name">Name</label>
+            <input
+              id="name"
+              className="w3-input"
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+            />
 
-            <label htmlFor="message">Message:</label>
-            <textarea id="message" rows="6" />
+            <label htmlFor="email">Email</label>
+            <input
+              id="email"
+              className="w3-input"
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
 
-            <button type="submit" className="btn">Submit Form</button>
+
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              className="w3-input"
+              name="message"
+              placeholder="Write your message here..."
+              rows="5"
+              required
+            ></textarea>
+
+            <button type="submit" className="btn">
+              Send Message
+            </button>
           </form>
         </div>
       </section>

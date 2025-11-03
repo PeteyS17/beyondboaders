@@ -13,7 +13,7 @@ const App = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />                {/* <-- IMPORTANT */}
+        <Route index element={<Home />} />               
         <Route path="destinations" element={<Cities />} />
         <Route path="activities" element={<Activities />} />
         <Route path="blog" element={<Blog />} />
