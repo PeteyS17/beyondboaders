@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/beyondboaders/static/css/main.a5d8c236.css",
-    "main.js": "/beyondboaders/static/js/main.6c09d4ed.js",
+    "main.css": "/beyondboaders/static/css/main.6f99bd60.css",
+    "main.js": "/beyondboaders/static/js/main.c27c8981.js",
     "static/media/beach2.png": "/beyondboaders/static/media/beach2.acac0826e239f820b9d6.png",
     "static/media/queens2.png": "/beyondboaders/static/media/queens2.50c3a8d02562d3439a22.png",
     "static/media/streetmarket.jpeg": "/beyondboaders/static/media/streetmarket.91877e94204355527f8c.jpeg",
@@ -13,11 +13,11 @@
     "static/media/coastaltown.jpeg": "/beyondboaders/static/media/coastaltown.95aec67cddd02befee8c.jpeg",
     "static/media/queens.jpeg": "/beyondboaders/static/media/queens.f067a932efee30dfb370.jpeg",
     "index.html": "/beyondboaders/index.html",
-    "main.a5d8c236.css.map": "/beyondboaders/static/css/main.a5d8c236.css.map",
-    "main.6c09d4ed.js.map": "/beyondboaders/static/js/main.6c09d4ed.js.map"
+    "main.6f99bd60.css.map": "/beyondboaders/static/css/main.6f99bd60.css.map",
+    "main.c27c8981.js.map": "/beyondboaders/static/js/main.c27c8981.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5d8c236.css",
-    "static/js/main.6c09d4ed.js"
+    "static/css/main.6f99bd60.css",
+    "static/js/main.c27c8981.js"
   ]
 }
