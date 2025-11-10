@@ -1,9 +1,34 @@
+import { useState } from "react";
 import "../css/contact.css";
 import viewImg from "../images/arepas.jpeg";
 import marketImg from "../images/streetmarket.jpeg";
 import foodImg from "../images/tourist.jpeg";
 
 const Contact = () => {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+    const formData = new FormData(e.target);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("Thanks! Your message was sent.");
+        e.target.reset();
+      } else {
+        setStatus("Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("Network error. Please try again.");
+    }
+  };
+
   return (
     <main id="contact" className="main-content">
       <h2 className="center">About Beyond Borders</h2>
@@ -16,12 +41,10 @@ const Contact = () => {
           <img src={viewImg} alt="City lookout" />
           <figcaption>Iconic views, practical tips</figcaption>
         </figure>
-
         <figure className="tile card">
           <img src={marketImg} alt="Local market" />
           <figcaption>Local culture, real experiences</figcaption>
         </figure>
-
         <figure className="tile card">
           <img src={foodImg} alt="Local cuisine" />
           <figcaption>Local cuisines</figcaption>
@@ -45,49 +68,22 @@ const Contact = () => {
         <div className="contact-col">
           <h3>Contact Us</h3>
 
-          {/* W3Schools Contact Form */}
-          <form
-            action="https://api.web3forms.com/submit"
-            method="POST"
-            className="contact-form card"
-          >
+          <form className="contact-form card" onSubmit={handleSubmit}>
             <input type="hidden" name="access_key" value="f7dbe5f3-ba73-4be0-8f3c-c65a9df2106a" />
 
             <label htmlFor="name">Name</label>
-            <input
-              id="name"
-              className="w3-input"
-              type="text"
-              name="name"
-              placeholder="Your name"
-              required
-            />
+            <input id="name" type="text" name="name" placeholder="Your name" required />
 
             <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              className="w3-input"
-              type="email"
-              name="email"
-              placeholder="Your email"
-              required
-            />
-
+            <input id="email" type="email" name="email" placeholder="Your email" required />
 
             <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              className="w3-input"
-              name="message"
-              placeholder="Write your message here..."
-              rows="5"
-              required
-            ></textarea>
+            <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
 
-            <button type="submit" className="btn">
-              Send Message
-            </button>
+            <button type="submit" className="btn">Send Message</button>
           </form>
+
+          {status && <p className="center muted" style={{ marginTop: "8px" }}>{status}</p>}
         </div>
       </section>
     </main>

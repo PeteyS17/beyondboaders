@@ -1,45 +1,52 @@
-import queensImg from "../images/queens.jpeg";
-import londonImg from "../images/london1.jpeg";
-import tokyoImg from "../images/tokyo.jpeg";
-
-export const posts = [
+export const allPosts = [
   {
-    slug: "exploring-queens-new-york",
+    slug: "exploring-queens",
     title: "Exploring Queens, New York",
-    author: "Travel Blogger",
-    image: queensImg,
     excerpt:
       "Queens is diverse and full of surprises. I loved exploring different neighborhoods...",
-    paragraphs: [
-      "Queens is one of New York City’s most vibrant and diverse boroughs, offering a blend of cultures, cuisines, and experiences unlike anywhere else in the world. From bustling food hubs in Flushing and Jackson Heights to waterfront parks and skyline views in Long Island City, Queens has something for every type of traveler.",
-      "I started my day in Flushing, enjoying authentic Asian street food. Then I wandered through Flushing Meadows–Corona Park, which felt like stepping into a cultural crossroads. Later, I made my way to Long Island City, where the skyline views across the East River took my breath away. The mix of old-school diners, modern art spaces like MoMA PS1, and cozy waterfront parks makes Queens a borough that balances energy with relaxation.",
-      "Queens is more than a place to pass through on the way to the airport—it’s a destination worth exploring deeply. If you’re a foodie, culture lover, or just want a break from Manhattan’s rush, Queens will surprise you at every turn."
-    ]
+    content: `
+      Queens is one of New York City’s most vibrant and diverse boroughs, offering a blend of cultures,
+      cuisines, and experiences unlike anywhere else in the world. From bustling food hubs in Flushing and
+      Jackson Heights to waterfront parks and skyline views in Long Island City, Queens has something for
+      every type of traveler.
+
+      I started my day in Flushing, enjoying authentic Asian street food. Then I wandered through Flushing
+      Meadows–Corona Park, which felt like stepping into a cultural crossroads. Later, I made my way to Long
+      Island City, where the skyline views across the East River took my breath away.
+
+      Queens is more than a place to pass through on the way to the airport — it’s a destination worth exploring.
+      Whether you’re a foodie, culture lover, or just want a break from Manhattan’s rush, Queens will surprise
+      you at every turn.
+    `,
+    author: "Travel Blogger",
+    image: "images/queens.jpeg",
   },
   {
-    slug: "a-weekend-in-london",
+    slug: "weekend-in-london",
     title: "A Weekend in London",
-    author: "Petey’s Journal",
-    image: londonImg,
     excerpt:
       "London is a city where history meets modern culture. On my first day, I visited...",
-    paragraphs: [
-      "London blends royal traditions with a lively modern scene. Start in Westminster for iconic landmarks, then cross the river to South Bank for views and markets.",
-      "Spend an afternoon in Covent Garden or Notting Hill, and set aside an evening for a theater show or a stroll along the Thames.",
-      "Museums, parks, and food halls keep the pace chill but full of variety for a weekend."
-    ]
+    content: `
+      London is one of those cities that feels both familiar and endlessly exciting.
+      I spent the weekend exploring iconic spots like the Tower of London, Buckingham Palace,
+      and Camden Market. Every street seemed to have a story to tell.
+
+      From afternoon tea to the buzz of Soho nightlife, London truly has something for everyone.
+    `,
+    author: "Petey’s Journal",
+    image: "images/london1.jpeg",
   },
   {
     slug: "adventures-in-tokyo",
     title: "Adventures in Tokyo",
-    author: "Guest Contributor",
-    image: tokyoImg,
     excerpt:
       "Tokyo blends tradition and modern life seamlessly. I started with temples in Asakusa...",
-    paragraphs: [
-      "Begin in Asakusa for temples and street snacks, then explore Akihabara’s tech and pop culture. Head to Shibuya and Shinjuku for neon nights and skyline views.",
-      "Refuel with ramen or sushi and don’t miss quieter neighborhoods like Nakameguro for cafes by the canal.",
-      "Tokyo rewards curiosity—wander and you’ll keep finding new corners to love."
-    ]
-  }
+    content: `
+      Tokyo is a sensory experience — neon lights, sushi bars, serene gardens, and the hum of
+      one of the world’s most advanced cities. I explored Asakusa’s Senso-ji Temple and wandered
+      through the vibrant Shibuya crossing. Tokyo’s blend of old and new made every moment feel special.
+    `,
+    author: "Guest Contributor",
+    image: "images/tokyo.jpeg",
+  },
 ];

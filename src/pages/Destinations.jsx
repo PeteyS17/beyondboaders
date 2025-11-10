@@ -1,24 +1,39 @@
+import { useEffect, useState } from "react";
 import "../css/destinations.css";
-import CityCard from "../components/cards/CityCard";
-import { allCities } from "../data/cities";
+import Destination from "../components/Destination";
 
-const Destinations = () => {
+const API_BASE =
+  process.env.NODE_ENV === "production"
+    ? "https://server-destinations.onrender.com"
+    : "http://localhost:3001";
+
+export default function Destinations() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch(`${API_BASE}/api/destinations`).then(r => r.json()).then(setItems);
+  }, []);
+
   return (
     <main id="destinations" className="main-content">
       <h2>Find your dream destination</h2>
-      <div id="city-list" className="columns">
-        {allCities.map((city) => (
-          <CityCard
-            key={city.name}
-            name={city.name}
-            image={city.image}
-            meta={city.meta}
-            description={city.description}
-          />
-        ))}
-      </div>
+      <section className="dest-grid">
+  {items.map(d => (
+    <Destination
+      key={d._id}
+      apiBase={API_BASE}
+      title={d.title}
+      location={d.location}
+      category={d.category}
+      duration={d.duration}
+      budget={d.budget}
+      blurb={d.blurb}
+      img_name={d.img_name}
+    />
+  ))}
+</section>
+
+
     </main>
   );
-};
-
-export default Destinations;
+}

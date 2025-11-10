@@ -1,44 +1,110 @@
-#main-nav {
-  background-color:cornflowerblue;
+:root {
+  --nav-bg: #6ea1f3;
+  --nav-text: #ffffff;
+  --nav-active-bg: #fff;
+  --nav-active-text: #6ea1f3;
 }
 
-#main-nav ul {
-  margin:0;
-  padding-left:0;
+.site-header {
+  background: var(--nav-bg);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#main-nav li {
-  list-style-type:none;
-  padding:5px;
-  flex:1;
-  padding:5px;
-  border-bottom:1px solid white;
-  text-align:center;
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 16px;
 }
 
-#main-nav li a {
+.brand {
+  color: var(--nav-text);
+  font-weight: 800;
+  font-size: 1.25rem;
   text-decoration: none;
-  color:white;
 }
 
-#main-nav li a:hover {
-  color:#f4d570;
+/* ---------- Nav Links (desktop) ---------- */
+.nav-links {
+  display: flex;
+  gap: 16px;
 }
 
-#main-nav .hide-small {
-  display:none;
+.nav-links a {
+  color: var(--nav-text);
+  text-decoration: none;
+  padding: 8px 14px;
+  font-weight: 700;
+  border: 2px solid var(--nav-text);
+  border-radius: 12px;
+  transition: all 0.2s ease;
 }
 
-@media screen and (min-width: 768px) {
-  #main-nav button {
-      display:none;
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--nav-active-bg);
+  color: var(--nav-active-text);
+}
+
+/* ---------- Toggle Button ---------- */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle .bar {
+  width: 24px;
+  height: 3px;
+  background-color: var(--nav-text);
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* ---------- Mobile Styles ---------- */
+@media (max-width: 820px) {
+  .nav-toggle {
+    display: flex;
   }
 
-  #main-nav .hide-small {
-      display:flex;
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--nav-bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
 
-  #main-nav li {
-      border-bottom:0;
+  .nav-links.open {
+    max-height: 400px;
+  }
+
+  .nav-links a {
+    display: block;
+    text-align: center;
+    margin: 6px 0;
+    border: none;
+    border-radius: 0;
+    background: none;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
   }
 }

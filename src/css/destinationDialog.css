@@ -1,0 +1,61 @@
+.dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .dialog {
+    background: #f9fbff;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .dialog-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .dialog-content {
+    padding: 16px 20px;
+    color: #0b315b;
+  }
+  
+  .dialog-content h2 {
+    margin-top: 0;
+    color: #102a54;
+  }
+  
+  .dialog-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    transition: background 0.2s ease;
+  }
+  
+  .dialog-close:hover {
+    background: #ddd;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  

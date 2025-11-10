@@ -1,0 +1,25 @@
+.dest-card {
+    background: #ffffff;
+    border: 1px solid #e6ecf6;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .dest-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  }
+  .dest-media img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+  }
+  .dest-body { padding: 14px 16px 18px; }
+  .dest-title { margin: 0 0 6px; font-size: 1.15rem; }
+  .dest-meta { margin: 0 0 10px; font-weight: 600; font-size: .9rem; color: #1f3066; }
+  .dest-accent { color: #0f2bd6; }
+  .dest-blurb { margin: 0; color: #3a3f52; line-height: 1.45; }
+  .clickable { cursor: pointer; }
+  

@@ -1,21 +1,17 @@
 import { Link } from "react-router-dom";
 import "../../css/blog.css";
 
-const PostCard = ({ slug, title, image, excerpt, author }) => {
+export default function PostCard({ slug, title, author, image, excerpt }) {
   return (
-    <article className="post-card panel">
-      <img src={image} alt={title} className="post-img" />
-
-      <div className="post-content">
-        <h3 className="post-heading">{title}</h3>
-        <p className="post-excerpt">{excerpt}</p>
-        <p className="read-more">
-          <Link to={`/blog/${slug}`}>Read more...</Link>
-        </p>
-        <p className="post-by">— {author}</p>
-      </div>
-    </article>
+    <Link to={`/blog/${slug}`} className="post-link" style={{ textDecoration: "none", color: "inherit" }}>
+      <article className="panel post-card">
+        <img className="post-img" src={image} alt={title} />
+        <div className="post-content">
+          <h3 className="post-heading">{title}</h3>
+          <p className="post-excerpt">{excerpt}</p>
+          <p className="post-by">— <span className="post-author">{author}</span></p>
+        </div>
+      </article>
+    </Link>
   );
-};
-
-export default PostCard;
+}
