@@ -1,23 +1,19 @@
 {
   "files": {
-    "main.css": "/beyondboaders/static/css/main.6f99bd60.css",
-    "main.js": "/beyondboaders/static/js/main.c27c8981.js",
+    "main.css": "/beyondboaders/static/css/main.762ff585.css",
+    "main.js": "/beyondboaders/static/js/main.085cb538.js",
     "static/media/beach2.png": "/beyondboaders/static/media/beach2.acac0826e239f820b9d6.png",
-    "static/media/queens2.png": "/beyondboaders/static/media/queens2.50c3a8d02562d3439a22.png",
     "static/media/streetmarket.jpeg": "/beyondboaders/static/media/streetmarket.91877e94204355527f8c.jpeg",
     "static/media/arepas.jpeg": "/beyondboaders/static/media/arepas.888b80459c94a67c7e78.jpeg",
     "static/media/tokyo.jpeg": "/beyondboaders/static/media/tokyo.cf3093fa24eb27463053.jpeg",
-    "static/media/oldtown.jpeg": "/beyondboaders/static/media/oldtown.c05806a247bf73e1c4b9.jpeg",
     "static/media/mountvilage.jpeg": "/beyondboaders/static/media/mountvilage.e5d507e105f2863184c7.jpeg",
     "static/media/london1.jpeg": "/beyondboaders/static/media/london1.678874013b5292e99c6d.jpeg",
-    "static/media/coastaltown.jpeg": "/beyondboaders/static/media/coastaltown.95aec67cddd02befee8c.jpeg",
-    "static/media/queens.jpeg": "/beyondboaders/static/media/queens.f067a932efee30dfb370.jpeg",
     "index.html": "/beyondboaders/index.html",
-    "main.6f99bd60.css.map": "/beyondboaders/static/css/main.6f99bd60.css.map",
-    "main.c27c8981.js.map": "/beyondboaders/static/js/main.c27c8981.js.map"
+    "main.762ff585.css.map": "/beyondboaders/static/css/main.762ff585.css.map",
+    "main.085cb538.js.map": "/beyondboaders/static/js/main.085cb538.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f99bd60.css",
-    "static/js/main.c27c8981.js"
+    "static/css/main.762ff585.css",
+    "static/js/main.085cb538.js"
   ]
 }
