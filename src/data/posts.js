@@ -19,7 +19,7 @@ export const allPosts = [
       you at every turn.
     `,
     author: "Travel Blogger",
-    image: "images/queens.jpeg",
+    image: "images/queens2.png",
   },
   {
     slug: "weekend-in-london",

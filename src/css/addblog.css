@@ -1,0 +1,47 @@
+.add-blog {
+  background: #d9f0ff;
+  border: 2px solid #2a68ff;
+  padding: 16px;
+  border-radius: 14px;
+  max-width: 650px;
+  margin: 20px auto;
+  display: grid;
+  gap: 12px;
+}
+
+.add-blog input,
+.add-blog textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
+
+.add-blog button {
+  background: #2a68ff;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.blog-error {
+  color: #b00020;
+  font-weight: 700;
+}
+
+.blog-success {
+  color: #0b7a24;
+  font-weight: 700;
+}
+.delete-blog {
+  margin: 8px 0 0 16px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #ff4d4d;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}

@@ -8,17 +8,17 @@ import Cities from "./pages/Destinations";
 import Activities from "./pages/Activities";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
-import PostDetail from "./components/PostDetail"; 
+import PostDetail from "./components/PostDetail";
 
 const App = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />               
+        <Route index element={<Home />} />
         <Route path="destinations" element={<Cities />} />
         <Route path="activities" element={<Activities />} />
         <Route path="blog" element={<Blog />} />
-        <Route path="blog/:slug" element={<PostDetail />} /> 
+        <Route path="blog/:id" element={<PostDetail />} />
         <Route path="contact" element={<Contact />} />
       </Route>
     </Routes>
