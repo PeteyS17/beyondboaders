@@ -126,3 +126,116 @@
   color: #666;
   font-size: .95rem;
 }
+ .add-blog-form {
+  width: 350px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.add-blog-form input,
+.add-blog-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.add-blog-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.add-blog-form button {
+  background: #0077cc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-blog-form button:hover {
+  background: #005fa3;
+}
+
+.add-blog-form h3 {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog {
+  background: #fff;
+  padding: 25px;
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.add-blog-form input,
+.add-blog-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.add-blog-form button {
+  width: 100%;
+  padding: 10px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.open-add-blog {
+  background: #16e0d9;
+  color: #000000;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 15px auto;
+  display: block;
+  transition: transform 0.15s ease, background 0.2s ease;
+  box-shadow: 0 4px 10px rgba(255, 182, 218, 0.5);
+}
+
+.open-add-blog:hover {
+  background: #0bdf83;
+  transform: translateY(-3px);
+}
+
+.open-add-blog:active {
+  transform: scale(0.96);
+}

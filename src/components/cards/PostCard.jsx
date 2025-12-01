@@ -1,24 +1,27 @@
-const API_BASE =
-  process.env.NODE_ENV === "production"
-    ? "https://server-destinations.onrender.com"
-    : "http://localhost:3001";
+const PostCard = ({ blog, apiBase, onDelete, onEdit }) => {
+  const { title, author, excerpt, body, main_image, isUserBlog } = blog;
+  const imgSrc = `${apiBase}/images/${main_image}`;
 
-const PostCard = ({ title, author, excerpt, main_image, body, children }) => {
   return (
-    <div className="post-card">
-      <img
-        src={`${API_BASE}/images/${main_image}`}
-        alt={title}
-        className="post-img"
-      />
+    <section className="panel post-card">
+      <img src={imgSrc} alt={title} className="post-img" />
+
       <div className="post-content">
-        <h3>{title}</h3>
-        <p className="post-author">By {author}</p>
-        <p>{excerpt}</p>
+        <h3 className="post-heading">{title}</h3>
+        <p className="post-author">{author}</p>
+        
+        <p className="post-excerpt">{excerpt}</p>
+
         <p className="post-body">{body}</p>
-        {children}
+
+        {isUserBlog !== false && (
+          <div className="blog-buttons">
+            <button className="edit-blog" onClick={onEdit}>Edit</button>
+            <button className="delete-blog" onClick={onDelete}>Delete</button>
+          </div>
+        )}
       </div>
-    </div>
+    </section>
   );
 };
 
